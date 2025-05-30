@@ -1,0 +1,11 @@
+10 30 20 50 60
+Priority Queue Output:
+Deleted: 10
+20 30 60 50
+Deleted: 20
+30 50 60
+Deleted: 30
+50 60
+Deleted: 50
+60
+Deleted: 60

@@ -1,0 +1,50 @@
+
+simulate_priority_preemptive_scheduling called
+
+------------------------------------
+Snapshot at clock time 1:
+------------------------------------
+Gantt Chart for CPU 0:
+	| P1  | P1  |
+	0     1     
+Gantt Chart for CPU 1:
+	| IDLE| P2  |
+	0     1     
+Ready Queue:
+	1 2 
+
+------------------------------------
+Snapshot at clock time 4:
+------------------------------------
+Gantt Chart for CPU 0:
+	| P1  | P1  | P1  | P1  | P1  |
+	0     1     2     3     4     
+Gantt Chart for CPU 1:
+	| IDLE| P2  | P2  | P3  | P3  |
+	0     1     2     3     4     
+Ready Queue:
+	1 4 3 
+
+------------------------------------
+Snapshot at clock time 6:
+------------------------------------
+Gantt Chart for CPU 0:
+	| P1  | P1  | P1  | P1  | P1  | P5  | P5  |
+	0     1     2     3     4     5     6     
+Gantt Chart for CPU 1:
+	| IDLE| P2  | P2  | P3  | P3  | P1  | P1  |
+	0     1     2     3     4     5     6     
+Ready Queue:
+	5 1 6 4 3 
+
+
+
+-------------------------------------------------------
+Final Gantt Chart after all the processes are executed:
+-------------------------------------------------------
+Gantt Chart for CPU 0:
+	| P1  | P1  | P1  | P1  | P1  | P5  | P5  | P5  | P5  | P5  | P7  | P4  | P6  | P6  | P6  | P6  |
+	0     1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    
+Gantt Chart for CPU 1:
+	| IDLE| P2  | P2  | P3  | P3  | P1  | P1  | P1  | P3  | P3  | P5  | P6  | IDLE| IDLE| IDLE| IDLE|
+	0     1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    
